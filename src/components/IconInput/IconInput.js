@@ -30,11 +30,13 @@ const IconInput = ({ label, icon, width = 250, size, placeholder }) => {
         ...SIZE_VARS[size],
       }}
     >
-      <IconWrapper htmlFor="icon-input">
+      <label>
         <VisuallyHidden>{label}</VisuallyHidden>
+      </label>
+      <IconWrapper>
         <Icon id={icon} size={iconSize} />
       </IconWrapper>
-      <NativeInput id="icon-input" placeholder={placeholder} />
+      <NativeInput placeholder={placeholder} />
     </Wrapper>
   );
 };
@@ -42,38 +44,40 @@ const IconInput = ({ label, icon, width = 250, size, placeholder }) => {
 const Wrapper = styled.div`
   position: relative;
   display: inline-block;
-  max-width: var(--width);
-  padding-left: calc(var(--icon-size) + 1em);
-  color: ${COLORS.gray500};
-  border-bottom: var(--border-size) solid ${COLORS.black};
-
-  &:hover {
-    color: ${COLORS.black};
-  }
-`;
-
-const IconWrapper = styled.label`
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  width: 24px;
-  height: 24px;
+  width: var(--width);
 `;
 
 const NativeInput = styled.input`
+  width: 100%;
+  padding-left: calc(var(--icon-size) + 1em);
+  color: ${COLORS.gray700};
   font-family: "Roboto", sans-serif;
   font-size: var(--font-size);
   height: var(--height);
   border: none;
-  color: ${COLORS.gray700};
+  border-bottom: var(--border-size) solid ${COLORS.black};
+  outline-offset: 2px;
 
   &:empty {
     color: ${COLORS.gray500};
   }
 
   &:hover {
+    color: ${COLORS.black};
+  }
+`;
+
+const IconWrapper = styled.div`
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: var(--icon-size);
+  height: var(--icon-size);
+  color: ${COLORS.gray700};
+
+  ${Wrapper}:hover & {
     color: ${COLORS.black};
   }
 `;

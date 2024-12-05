@@ -5,6 +5,7 @@ import { COLORS } from "../../constants";
 import Icon from "../Icon";
 import { getDisplayedValue } from "./Select.helpers";
 
+// NOTE: couldn't find how to use styled components with Icon
 const Select = ({ label, value, onChange, children }) => {
   const displayedValue = getDisplayedValue(value, children);
 

@@ -10,12 +10,12 @@ const SIZE_VARS = {
   small: {
     "--font-size": `${18 / 16}rem`,
     "--border-size": "1px",
-    "--height": "24px",
+    "--height": `${24 / 16}rem`,
   },
   large: {
     "--font-size": `${18 / 16}rem`,
     "--border-size": "2px",
-    "--height": "36px",
+    "--height": `${36 / 16}rem`,
   },
 };
 
@@ -58,7 +58,7 @@ const NativeInput = styled.input`
   border-bottom: var(--border-size) solid ${COLORS.black};
   outline-offset: 2px;
 
-  &:empty {
+  &::placeholder {
     color: ${COLORS.gray500};
   }
 

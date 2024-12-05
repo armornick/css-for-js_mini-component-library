@@ -20,7 +20,13 @@ const SIZES = {
 
 const ProgressBar = ({ value, size }) => {
   return (
-    <Wrapper role="progressbar" aria-valuenow={value} style={SIZES[size]}>
+    <Wrapper
+      role="progressbar"
+      aria-valuenow={value}
+      aria-valuemin={0}
+      aria-valuemax={100}
+      style={SIZES[size]}
+    >
       <ValueBar value={value}>
         <VisuallyHidden>Current Value: {value}</VisuallyHidden>
       </ValueBar>

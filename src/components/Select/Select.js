@@ -32,6 +32,7 @@ const Select = ({ label, value, onChange, children }) => {
 const Wrapper = styled.div`
   position: relative;
   display: inline-block;
+  font-family: "Roboto", sans-serif;
   color: ${COLORS.gray700};
   background-color: ${COLORS.transparentGray15};
   border-radius: 8px;
@@ -43,6 +44,7 @@ const Wrapper = styled.div`
 `;
 
 const SelectElement = styled.select`
+  font-family: "Roboto", sans-serif;
   appearance: none;
   background-color: transparent;
   padding: 16px;

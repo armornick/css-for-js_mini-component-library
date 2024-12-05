@@ -76,6 +76,7 @@ const IconWrapper = styled.div`
   width: var(--icon-size);
   height: var(--icon-size);
   color: ${COLORS.gray700};
+  pointer-events: none;
 
   ${Wrapper}:hover & {
     color: ${COLORS.black};
